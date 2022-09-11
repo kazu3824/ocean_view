@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  root to: "homes#top"
+  get "home/about"=>"homes#about"
   namespace :public do
     get 'oceans/new'
     get 'oceans/index'
     get 'oceans/show'
     get 'oceans/edit'
   end
-  root to: "homes#top"
   namespace :public do
     get 'users/index'
     get 'users/show'
